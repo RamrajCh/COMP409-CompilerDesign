@@ -54,6 +54,8 @@ def stringfy(L):
 
     Args:
         L (list): A list containing the RHS of production rules.
+        Example
+        L = ["AcB", "cC", "c"]
 
     Returns:
         str: A string of the given list concatenated together with | in the middle.
@@ -80,16 +82,15 @@ def print_grammar(grammar):
         print(f"{key} ---> {stringfy(grammar[key])}")   
 
 if __name__ == "__main__":
+    # grammar = {
+    #     "A" : ["AcB", "cC", "c"],
+    #     "B" : ["bB", "id"],
+    #     "C" : ["CaB", "BaB", "B"],
+    # }
     grammar = {
-        "A" : ["AcB", "cC", "c"],
-        "B" : ["bB", "id"],
-        "C" : ["CaB", "BaB", "B"],
-    }
-    grammar = {
-        "*S" : ["A"],
         "A" : ["aB", "aC", "Ad", "Ae"],
         "B" : ["bBc", "f"],
         "C" : ["g"]
     }
     remove_left_recursion(grammar)
-    print_grammar(grammar)
+    print_grammar(grammar) 
