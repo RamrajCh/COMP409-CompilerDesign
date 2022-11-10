@@ -1,0 +1,6 @@
+# DFA accepting all strings with next to last symbol is a.
+a|b
+-->0|1|0
+1|2|3
+*2|2|3
+*3|1|0

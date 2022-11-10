@@ -1,0 +1,8 @@
+function equation()
+{
+    int a = 50.0;
+    int b = 100;
+    int result = a + b * 20;
+    return result;
+}
+
