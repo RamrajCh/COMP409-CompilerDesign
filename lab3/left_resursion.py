@@ -40,14 +40,16 @@ def remove_left_recursion(grammar):
         rule = copy.copy(grammar[V])
         rule_ = []
         for R in grammar[V]:
-            if V == R[0]:
+            if V == R[0]: 
                 rule.remove(R)
                 rule_.append(R[1:]+V)
-            else:
+            else: 
                 rule.remove(R)
                 rule.append(R+V+"'")
         grammar[V] = rule
         grammar[V+"'"] = rule_ + ['epsilon']
+    for N, R in grammar.items():
+        if not R: R.append(N+"'")
     
 def stringfy(L):
     """Stringyfy the production rule
@@ -79,7 +81,8 @@ def print_grammar(grammar):
         }
     """
     for key in sorted(grammar.keys()):
-        print(f"{key} ---> {stringfy(grammar[key])}")   
+        print(f"{key} ---> {stringfy(grammar[key])}")
+    print("\n")
 
 if __name__ == "__main__":
     # grammar = {
@@ -92,5 +95,6 @@ if __name__ == "__main__":
         "B" : ["bBc", "f"],
         "C" : ["g"]
     }
+    print_grammar(grammar)
     remove_left_recursion(grammar)
     print_grammar(grammar) 

@@ -1,0 +1,3 @@
+A ---> AcB|cC|c
+B ---> bB|id
+C ---> CaB|BaB|B

@@ -1,0 +1,4 @@
+A ---> aB|aC|def|eC
+B ---> bBc|bBbd
+C ---> gCd|caB|cb|D
+D ---> aB|aC

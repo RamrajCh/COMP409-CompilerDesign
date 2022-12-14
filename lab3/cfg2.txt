@@ -1,0 +1,5 @@
+A ---> aB|aC|Ad|Ae
+B ---> bBc|f
+C ---> gCd|CaB|Cb|D
+D ---> DaB|E
+E ---> Eb
